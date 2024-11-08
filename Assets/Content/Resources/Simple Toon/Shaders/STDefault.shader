@@ -186,7 +186,7 @@
                 float toon = Toon(NdotL, atten);
 
 				fixed4 shadecol = _DarkColor;
-				fixed4 litcol = ColorBlend(_Color, _LightColor0, _AmbientCol);
+				fixed4 litcol = ColorBlend(_LightColor0, _Color, _AmbientCol);
 				fixed4 texcol = tex2D(_MainTex, i.uv) * litcol * _ColIntense + _ColBright;
 
 				float4 blendCol = ColorBlend(shadecol, texcol, toon);
