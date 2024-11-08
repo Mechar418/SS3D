@@ -1,4 +1,5 @@
-﻿using SS3D.Core.Behaviours;
+﻿using FishNet.Component.Transforming;
+using SS3D.Core.Behaviours;
 using SS3D.Systems.Inventory.UI;
 using System.Collections.Generic;
 using System;
@@ -269,8 +270,16 @@ namespace SS3D.Systems.Inventory.Containers
                     throw new ArgumentOutOfRangeException(nameof(op), op, null);
             }
 
-            if(changeType == ContainerChangeType.Remove)
+            if (changeType == ContainerChangeType.Add && newItem.Item.TryGetComponent(out NetworkTransform networkTransform))
             {
+                 networkTransform.SetSynchronizePosition(false);
+                 networkTransform.SetSynchronizeRotation(false);
+            }
+
+            if (changeType == ContainerChangeType.Remove && oldItem.Item.TryGetComponent(out NetworkTransform networkTransform2))
+            {
+                networkTransform2.SetSynchronizePosition(true);
+                networkTransform2.SetSynchronizeRotation(true);
                 //Punpun.Information(this, "from container " + this.gameObject + ", removing item" + oldItem.Item?.name);
             }
 
