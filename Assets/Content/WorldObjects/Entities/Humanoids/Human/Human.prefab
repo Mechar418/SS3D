@@ -1953,14 +1953,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -1972,7 +1972,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -2291,14 +2291,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -2310,7 +2310,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -2945,14 +2945,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -2964,7 +2964,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -3198,14 +3198,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -3217,7 +3217,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -4146,14 +4146,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -4165,7 +4165,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -5037,14 +5037,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -5056,7 +5056,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -6245,14 +6245,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -6264,7 +6264,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -6580,14 +6580,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -6599,7 +6599,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -7172,6 +7172,7 @@ MonoBehaviour:
   _armatureRoot: {fileID: 8356004225170572391}
   _standUpFaceUpClip: {fileID: 7400000, guid: 819462e6a707a0147a647482f5d2a038, type: 2}
   _standUpFaceDownClip: {fileID: 7400000, guid: 3b44d4082074d7f4cb19f2036c9c9a01, type: 2}
+  _ragdollPartSyncInterval: 10
 --- !u!114 &7722998452492527915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7789,14 +7790,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -7808,7 +7809,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -8324,14 +8325,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -8343,7 +8344,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -8840,14 +8841,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -8859,7 +8860,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -8997,14 +8998,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -9016,7 +9017,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -9988,14 +9989,14 @@ MonoBehaviour:
     Position: 1
     Rotation: 1
     Scale: 0
-  _interpolation: 5
-  _extrapolation: 2
+  _interpolation: 1
+  _extrapolation: 0
   _enableTeleport: 0
   _teleportThreshold: 1
   _scaleThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
-  _enableNetworkLod: 1
+  _enableNetworkLod: 0
   _interval: 1
   _synchronizePosition: 1
   _positionSnapping:
@@ -10007,7 +10008,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -11357,6 +11358,7 @@ PrefabInstance:
     - {fileID: -5519180950159476568, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
     - {fileID: 5300969123225040956, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
     - {fileID: 6224308330480900340, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
+    - {fileID: 427023688766138603, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
 --- !u!114 &2124807441123396136 stripped
 MonoBehaviour:
@@ -14416,6 +14418,7 @@ PrefabInstance:
     - {fileID: 3804509484627004799, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
     - {fileID: 7380375041138074868, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
     - {fileID: 6209280579436442931, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
+    - {fileID: 3325623441715482320, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
 --- !u!114 &2032574427462071784 stripped
 MonoBehaviour:
