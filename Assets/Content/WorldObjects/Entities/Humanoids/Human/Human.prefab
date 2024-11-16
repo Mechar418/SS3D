@@ -6779,7 +6779,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 111
+  <PrefabId>k__BackingField: 113
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 0
   <SceneId>k__BackingField: 0
@@ -11353,12 +11353,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: -7742570199249696470, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
+    - {fileID: 0}
     - {fileID: 8124597772398120270, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
     - {fileID: -5519180950159476568, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
     - {fileID: 5300969123225040956, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
     - {fileID: 6224308330480900340, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
-    - {fileID: 427023688766138603, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f5954f009d06b2439ca637b43920440, type: 3}
 --- !u!114 &2124807441123396136 stripped
 MonoBehaviour:
@@ -14413,12 +14412,11 @@ PrefabInstance:
       value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4484307789628443258, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
+    - {fileID: 0}
     - {fileID: 171912613050136349, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
     - {fileID: 3804509484627004799, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
     - {fileID: 7380375041138074868, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
     - {fileID: 6209280579436442931, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
-    - {fileID: 3325623441715482320, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35dfc7c3f708a5b48a206b4a44e7ab49, type: 3}
 --- !u!114 &2032574427462071784 stripped
 MonoBehaviour:
