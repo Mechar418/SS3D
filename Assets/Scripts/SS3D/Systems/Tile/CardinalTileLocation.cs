@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 namespace SS3D.Systems.Tile
 {
@@ -16,21 +13,21 @@ namespace SS3D.Systems.Tile
         private int _y;
 
         /// <summary>
-        /// the four potential placed tile objects. 0 is for north, 1 is for east, 2 for south, 3 for west.
+        /// The four potential placed tile objects. 0 is for north, 1 is for east, 2 for south, 3 for west.
         /// </summary>
         private PlacedTileObject[] _cardinalPlacedTileObject = new PlacedTileObject[4];
-
-        /// <summary>
-        /// The layer this location is on.
-        /// </summary>
-        public TileLayer Layer => _layer;
-
+        
         public CardinalTileLocation(TileLayer layer, int x, int y)
         {
             _layer = layer;
             _x = x;
             _y = y;
         }
+
+        /// <summary>
+        /// The layer this location is on.
+        /// </summary>
+        public TileLayer Layer => _layer;
 
         public void ClearAllPlacedObject()
         {
@@ -46,23 +43,24 @@ namespace SS3D.Systems.Tile
             {
                 return false;
             }
-            return _cardinalPlacedTileObject[DirToIndex(direction)] == null;
+            
+            return !_cardinalPlacedTileObject[DirToIndex(direction)];
         }
 
         public bool IsFullyEmpty()
         {
-            return _cardinalPlacedTileObject.Where(x => x != null).Count() == 0;
+            return !_cardinalPlacedTileObject.Any(x => x);
         }
 
         public ISavedTileLocation Save()
         {
-            List<SavedPlacedTileObject> savedTileObjects= new List<SavedPlacedTileObject>();
-            foreach(PlacedTileObject tileObject in _cardinalPlacedTileObject.Where(x => x != null))
+            List<SavedPlacedTileObject> savedTileObjects = new();
+            foreach (PlacedTileObject tileObject in _cardinalPlacedTileObject.Where(x => x))
             {
                 savedTileObjects.Add(tileObject.Save());
             }
 
-            return new SavedTileCardinalLocation(savedTileObjects, new Vector2Int(_x, _y), _layer);
+            return new SavedTileCardinalLocation(savedTileObjects, new(_x, _y), _layer);
         }
 
         public bool TryClearPlacedObject(Direction direction = Direction.North)
@@ -73,12 +71,12 @@ namespace SS3D.Systems.Tile
             }
 
             PlacedTileObject placedObject = _cardinalPlacedTileObject[DirToIndex(direction)];
-            if (placedObject != null)
+            if (placedObject)
             {
                 placedObject.DestroySelf();
-                placedObject = null;
                 return true;
             }
+            
             return false;
         }
 
@@ -91,25 +89,27 @@ namespace SS3D.Systems.Tile
             }
 
             PlacedTileObject currentPlacedObject = _cardinalPlacedTileObject[DirToIndex(direction)];
-            if (currentPlacedObject != null)
+            if (currentPlacedObject)
             {
                 placedObject = currentPlacedObject;
                 return true;
             }
+            
             placedObject = null;
             return false;
         }
 
         public void AddPlacedObject(PlacedTileObject tileObject, Direction direction = Direction.North)
         {
-            if (!TileHelper.CardinalDirections().Contains(direction))
-            {
-                return;
-            }
-            else
+            if (TileHelper.CardinalDirections().Contains(direction))
             {
                 _cardinalPlacedTileObject[DirToIndex(direction)] = tileObject;
             }
+        }
+        
+        public List<PlacedTileObject> GetAllPlacedObject()
+        {
+            return _cardinalPlacedTileObject.Where(x => x).ToList();
         }
 
         /// <summary>
@@ -125,12 +125,7 @@ namespace SS3D.Systems.Tile
         /// </summary>
         private Direction IndexToDir(int i)
         {
-            return (Direction) (i*2);
-        }
-
-        public List<PlacedTileObject> GetAllPlacedObject()
-        {
-            return _cardinalPlacedTileObject.Where(x => x!= null).ToList();
+            return (Direction)(i * 2);
         }
     }
 }

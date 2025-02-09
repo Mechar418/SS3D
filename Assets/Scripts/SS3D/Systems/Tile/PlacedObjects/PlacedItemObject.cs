@@ -2,9 +2,6 @@ using FishNet;
 using FishNet.Object;
 using SS3D.Core;
 using SS3D.Logging;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SS3D.Systems.Tile
@@ -14,6 +11,12 @@ namespace SS3D.Systems.Tile
     /// </summary>
     public class PlacedItemObject : NetworkBehaviour
     {
+        private ItemObjectSo _itemSo;
+        private Vector3 _worldPosition;
+        private Quaternion _rotation;
+        
+        public string NameString => _itemSo.NameString;
+        
         /// <summary>
         /// Creates a new PlacedItemObject from a prefab at a given position and rotation. Uses NetworkServer.Spawn() if a server is running.
         /// </summary>
@@ -28,7 +31,7 @@ namespace SS3D.Systems.Tile
             placedGameObject.transform.SetPositionAndRotation(worldPosition, rotation);
 
             PlacedItemObject placedObject = placedGameObject.GetComponent<PlacedItemObject>();
-            if (placedObject == null)
+            if (!placedObject)
             {
                 // Ideally an editor script adds this instead of doing it at runtime
                 placedObject = placedGameObject.AddComponent<PlacedItemObject>();
@@ -36,23 +39,25 @@ namespace SS3D.Systems.Tile
 
             placedObject.Setup(worldPosition, rotation, itemSo);
 
-            if (InstanceFinder.ServerManager != null && placedObject.GetComponent<NetworkObject>() != null)
+            if (!InstanceFinder.ServerManager)
             {
-                if (placedObject.GetComponent<NetworkObject>() == null)
-                    Log.Warning(Subsystems.Get<TileSystem>(), "{placedObject} does not have a Network Component and will not be spawned",
-                        Logs.Generic, placedObject.NameString);
-                else
-                    InstanceFinder.ServerManager.Spawn(placedGameObject);
+                Log.Warning(Subsystems.Get<TileSystem>(), "{placedObject} does not have a Network Component and will not be spawned", 
+                    Logs.Generic, placedObject.NameString);
+                return placedObject;
+            }
+
+            if (placedObject.GetComponent<NetworkObject>())
+            {
+                InstanceFinder.ServerManager.Spawn(placedGameObject);
+            }
+            else
+            {
+                Log.Warning(Subsystems.Get<TileSystem>(), "{placedObject} does not have a Network Component and will not be spawned", 
+                    Logs.Generic, placedObject.NameString);
             }
 
             return placedObject;
         }
-
-        private ItemObjectSo _itemSo;
-        private Vector3 _worldPosition;
-        private Quaternion _rotation;
-
-        public string NameString => _itemSo.NameString;
 
         /// <summary>
         /// Set up a new item object.
@@ -81,7 +86,7 @@ namespace SS3D.Systems.Tile
         /// <returns></returns>
         public SavedPlacedItemObject Save()
         {
-            return new SavedPlacedItemObject
+            return new()
             {
                 itemName = _itemSo.NameString,
                 worldPosition = _worldPosition,

@@ -521,7 +521,7 @@ namespace SS3D.Systems.Crafting
                 replace = true;
             }
 
-            Subsystems.Get<TileSystem>().CurrentMap.PlaceTileObject(resultTileObject.tileObjectSO,
+            Subsystems.Get<TileSystem>().CurrentMap.PlaceTileObject(resultTileObject.TileObjectSo,
                 TileHelper.GetClosestPosition(interactionEvent.Target.GetGameObject().transform.position),
                 direction, false, replace, false, out GameObject instance);
 
@@ -572,7 +572,7 @@ namespace SS3D.Systems.Crafting
                 replace = true;
             }
 
-            return Subsystems.Get<TileSystem>().CanBuild(result.tileObjectSO, interactionEvent.Target.GetGameObject().transform.position, Direction.North, replace);
+            return Subsystems.Get<TileSystem>().CanBuild(result.TileObjectSo, interactionEvent.Target.GetGameObject().transform.position, Direction.North, replace);
         }
 
         /// <summary>

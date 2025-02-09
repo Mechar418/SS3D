@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace SS3D.Systems.Tile
@@ -28,13 +26,14 @@ namespace SS3D.Systems.Tile
 
         public bool TryClearPlacedObject(Direction direction = Direction.North)
         {
-            if (PlacedObject != null)
+            if (!PlacedObject)
             {
-                PlacedObject.DestroySelf();
-                PlacedObject = null;
-                return true;
+                return false;
             }
-            return false;
+
+            PlacedObject.DestroySelf();
+            PlacedObject = null;
+            return true;
         }
 
         /// <summary>
@@ -43,7 +42,7 @@ namespace SS3D.Systems.Tile
         /// <returns></returns>
         public ISavedTileLocation Save()
         {
-            var placedSaveObject = PlacedObject.Save();
+            SavedPlacedTileObject placedSaveObject = PlacedObject.Save();
 
             // If we have a multi tile object, save only the instance where the origin is
             if (PlacedObject.GridOffsetList.Count > 1 && placedSaveObject.origin != new Vector2Int(_x, _y))
@@ -51,23 +50,24 @@ namespace SS3D.Systems.Tile
                 return null;
             }
 
-            return new SavedTileSingleLocation(placedSaveObject, new Vector2Int(_x, _y), _layer);
+            return new SavedTileSingleLocation(placedSaveObject, new(_x, _y), _layer);
         }
 
         public bool TryGetPlacedObject(out PlacedTileObject placedObject, Direction direction = Direction.North)
         {
-            if(PlacedObject != null)
+            if (PlacedObject)
             {
                 placedObject = PlacedObject;
                 return true;
             }
+            
             placedObject = null;
             return false;
         }
 
         public bool IsEmpty(Direction direction = Direction.North)
         {
-            return PlacedObject == null;
+            return !PlacedObject;
         }
 
         public void ClearAllPlacedObject()
@@ -77,7 +77,7 @@ namespace SS3D.Systems.Tile
 
         public bool IsFullyEmpty()
         {
-            return PlacedObject == null;
+            return !PlacedObject;
         }
 
         public void AddPlacedObject(PlacedTileObject tileObject, Direction direction = Direction.North)
@@ -87,8 +87,12 @@ namespace SS3D.Systems.Tile
 
         public List<PlacedTileObject> GetAllPlacedObject()
         {
-            return PlacedObject != null ? 
-                new List<PlacedTileObject> { PlacedObject } : new List<PlacedTileObject>();
+            return PlacedObject ? 
+                new()
+                {
+                    PlacedObject,
+                } 
+                : new List<PlacedTileObject>();
         }
     }
 }

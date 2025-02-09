@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace SS3D.Systems.Tile
+﻿namespace SS3D.Systems.Tile
 {
     /// <summary>
     /// Generic objects are used by adjacencies to connect to each other
